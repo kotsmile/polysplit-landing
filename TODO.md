@@ -2,3 +2,4 @@
 
 - [ ] SEO
 - [ ] LIGAL
+- [x] favicon
