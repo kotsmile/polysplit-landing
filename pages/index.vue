@@ -61,6 +61,16 @@ useSeoMeta({
         networks.
       </FwbP>
     </div>
+
+    <div>
+
+      <fwb-heading tag="h4" class="my-2">Contact Us? </fwb-heading>
+      <div>
+        If you have any questions or requests just contact us via <a class="text-primary"
+          href="mailto:polysplit@outlook.com">email</a>
+      </div>
+
+    </div>
     <div class="py-10">
       <fwb-heading tag="h4" class="mb-2">How to use?</fwb-heading>
       <FwbP>Simple, just like your regular RPC provider</FwbP>
@@ -124,15 +134,6 @@ useSeoMeta({
       </div>
     </div>
 
-    <div>
-
-      <fwb-heading tag="h4" class="my-2">Contact Us? </fwb-heading>
-      <div>
-        If you have any questions or request just contact with us via <a class="text-primary"
-          href="mailto:polysplit@outlook.com">email</a>
-      </div>
-
-    </div>
 
   </div>
 </template>
