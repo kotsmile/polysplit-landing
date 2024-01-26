@@ -66,7 +66,7 @@ useSeoMeta({
       <FwbP>Simple, just like your regular RPC provider</FwbP>
 
       <div class="flex relative justify-center my-2 items-center h-[70px] border-[2px] rounded-md bg-[#FFF]">
-        <FwbP class="font-mono text-[8px] sm:text-[15px]">
+        <FwbP class="font-mono text-[8px] sm:text-[18px] font-bold">
           {{ url }}
         </FwbP>
         <FwbButton color="alternative" class="absolute top-1/2 right-5 -translate-y-1/2" @click="onCopy">
