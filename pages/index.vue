@@ -128,7 +128,7 @@ useSeoMeta({
 
       <fwb-heading tag="h4" class="mb-2">Contact Us? </fwb-heading>
       <div>
-        <a href="mailto:polysplit@outlook.com">Email</a>
+        If you have any questions or request just contact with us via <a href="mailto:polysplit@outlook.com">email</a>
       </div>
 
     </div>
