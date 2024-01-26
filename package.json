@@ -16,11 +16,11 @@
     "@nuxtjs/google-fonts": "^3.0.0-1",
     "@nuxtjs/tailwindcss": "^6.11.1",
     "nuxt": "^3.9.3",
+    "nuxt-vercel-analytics": "^1.0.0",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@vercel/analytics": "^1.1.2",
     "@vueuse/core": "^10.7.2",
     "axios": "^1.6.7",
     "flowbite": "^2.2.1",
