@@ -35,8 +35,7 @@ useSeoMeta({
         1.1 User Provided Information
       </fwb-heading>
       <FwbP>
-        When you use our Service, we may collect information that you provide to
-        us voluntarily. This may include: accessed chain id and status of response.
+        When you use our Service, we does not track the IP address or other user info.
       </FwbP>
     </FwbP>
     <fwb-heading tag="h4" class="mb-2">
