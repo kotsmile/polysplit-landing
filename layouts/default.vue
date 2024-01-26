@@ -13,25 +13,19 @@ import {
 <template>
   <FwbNavbar class="bg-gradient-to-r from-primary-0 to-secondary-0">
     <template #logo>
-      <FwbNavbarLogo
-        alt="Flowbite logo"
-        image-url="/svgs/logo-inverse.svg"
-        link="#"
-      >
+      <FwbNavbarLogo alt="Flowbite logo" image-url="/svgs/logo-inverse.svg" link="#">
       </FwbNavbarLogo>
     </template>
     <template #default="{ isShowMenu }">
       <fwb-navbar-collapse :is-show-menu="isShowMenu">
-        <fwb-navbar-link link="/" class="font-bold text-secondary">
-          Home
-        </fwb-navbar-link>
-        <fwb-navbar-link link="/privacy" class="font-bold text-secondary"
-          >Privacy Policy
-        </fwb-navbar-link>
+        <NuxtLink to="/" class="font-bold text-white"> Home </NuxtLink>
+        <NuxtLink to="/privacy" class="font-bold text-white">
+          Privacy Policy
+        </NuxtLink>
       </fwb-navbar-collapse>
     </template>
   </FwbNavbar>
-  <div class="bg-white">
+  <div class="bg-white p-10 md:px-[450px]">
     <slot />
   </div>
 </template>

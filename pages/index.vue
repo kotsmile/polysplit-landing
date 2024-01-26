@@ -44,7 +44,7 @@ const onCopy = () => {
 
 <template>
   <div>
-    <div class="px-10 pt-10">
+    <div class="px-10">
       <FwbP class="text-lg">
         Welcome to <span class="text-secondary">Polysplit</span>, where
         cutting-edge blockchain solutions meet unparalleled speed and
