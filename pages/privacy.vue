@@ -75,7 +75,7 @@ useSeoMeta({
     <fwb-heading tag="h4" class="mb-2"> 7. Contact Us </fwb-heading>
     <FwbP class="mb-2">
       If you have any questions or concerns about this Privacy Policy, please
-      contact us at kotsmilewtm@gmail.com.
+      contact us at <a href="mailto:polysplit@outlook.com">polysplit@outlook.com</a>
     </FwbP>
     <FwbP class="mb-2">
       By using our Polysplit Blockchain RPC Aggregator, you agree to the terms

@@ -123,5 +123,15 @@ useSeoMeta({
         </FwbP>
       </div>
     </div>
+
+    <div>
+
+      <fwb-heading tag="h4" class="mb-2">Contact Us? </fwb-heading>
+      <div>
+        <a href="mailto:polysplit@outlook.com">Email</a>
+      </div>
+
+    </div>
+
   </div>
 </template>
