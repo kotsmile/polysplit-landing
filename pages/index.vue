@@ -44,7 +44,7 @@ const onCopy = () => {
 
 <template>
   <div>
-    <div class="px-10">
+    <div>
       <FwbP class="text-lg">
         Welcome to <span class="text-secondary">Polysplit</span>, where
         cutting-edge blockchain solutions meet unparalleled speed and
@@ -53,34 +53,19 @@ const onCopy = () => {
         networks.
       </FwbP>
     </div>
-    <div class="p-10">
+    <div class="py-10">
       <fwb-heading tag="h4" class="mb-2">How to use?</fwb-heading>
       <FwbP>Simple, just like your regular RPC provider</FwbP>
 
-      <div
-        class="flex relative justify-center my-2 items-center h-[70px] border-[2px] rounded-md bg-[#FFF]"
-      >
+      <div class="flex relative justify-center my-2 items-center h-[70px] border-[2px] rounded-md bg-[#FFF]">
         <FwbP class="font-mono text-[10px] sm:text-[20px]">
           {{ url }}
         </FwbP>
-        <FwbButton
-          color="alternative"
-          class="absolute top-1/2 right-5 -translate-y-1/2"
-          @click="onCopy"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-4 h-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
-            />
+        <FwbButton color="alternative" class="absolute top-1/2 right-5 -translate-y-1/2" @click="onCopy">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-4 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
           </svg>
         </FwbButton>
       </div>
@@ -88,23 +73,15 @@ const onCopy = () => {
       <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
         Currently supported chains:
       </h2>
-      <ul
-        class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400"
-      >
-        <ChainElement
-          v-for="chain of chainList"
-          v-bind="chain"
-          :key="chain.id"
-        />
+      <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
+        <ChainElement v-for="chain of chainList" v-bind="chain" :key="chain.id" />
       </ul>
     </div>
 
-    <div class="px-10">
+    <div>
       <div>
         <fwb-heading tag="h4" class="mb-2">Why Choose Us? </fwb-heading>
-        <fwb-heading tag="h5" class="mb-1"
-          >1. Lightning-Fast RPC Node Access:</fwb-heading
-        >
+        <fwb-heading tag="h5" class="mb-1">1. Lightning-Fast RPC Node Access:</fwb-heading>
         <FwbP>
           Experience a new era of speed with our high-performance RPC nodes.
           Accelerate your transactions and interactions with blockchain

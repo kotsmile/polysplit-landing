@@ -20,7 +20,7 @@ export default {
       },
     },
     fontFamily: {
-      sans: ['Montserrat'],
+      sans: ['Nunito'],
       mono: ['Space Mono'],
     },
   },

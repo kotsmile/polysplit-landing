@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts'],
   googleFonts: {
     families: {
-      Montserrat: true,
+      Nunito: true,
       'Space Mono': true,
     },
   },
