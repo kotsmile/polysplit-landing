@@ -31,11 +31,14 @@ const chainList: ChainElementProps[] = [
     logo: 'https://icons.llamao.fi/icons/chains/rsz_binance.jpg',
   },
 ]
-const url = 'https://rpc.polysplit.cloud/v1/chain/:id'
+const chainId = ref(':id')
+const url = computed(
+  () => 'https://rpc.polysplit.cloud/v1/chain/' + unref(chainId),
+)
 
 const { copy } = useClipboard()
 const onCopy = () => {
-  copy(url)
+  copy(unref(url))
 }
 </script>
 

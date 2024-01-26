@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import axios from 'axios'
+import { FwbButton, FwbBadge } from 'flowbite-vue'
 export interface ChainElementProps {
   name: string
   id: string
@@ -7,6 +9,26 @@ export interface ChainElementProps {
 }
 
 const props = defineProps<ChainElementProps>()
+
+const url = computed(
+  () => 'https://rpc.polysplit.cloud/v1/chain/' + unref(props.id),
+  //() => 'http://localhost:3001/v1/chain/' + unref(props.id),
+)
+const time = ref('-')
+
+onMounted(async () => {
+  const eth_chainIdRequest = {
+    method: 'eth_chainId',
+    params: [],
+    id: 1,
+    jsonrpc: '2.0',
+  }
+
+  await axios.post(unref(url), eth_chainIdRequest)
+  const now = Date.now()
+  await axios.post(unref(url), eth_chainIdRequest)
+  time.value = (Date.now() - now).toString()
+})
 </script>
 
 <template>
@@ -39,5 +61,6 @@ const props = defineProps<ChainElementProps>()
 
     <img :src="props.logo" class="rounded-full mr-2" />
     {{ props.name }} (id: {{ props.id }})
+    <FwbBadge type="green" class="ml-2">{{ time }} ms</FwbBadge>
   </li>
 </template>
