@@ -8,6 +8,14 @@ import {
   FwbHeading,
   FwbButton,
 } from 'flowbite-vue'
+
+useSeoMeta({
+  title: 'Polysplit Policy Privacy',
+  ogTitle: 'Polysplit Policy Privacy',
+  description: 'Polysplit blockchain RPC aggregator',
+  ogDescription: 'Polysplit blockchain RPC aggregator',
+  ogImage: 'https://polysplit.cloud/logo.png',
+})
 </script>
 
 <template>

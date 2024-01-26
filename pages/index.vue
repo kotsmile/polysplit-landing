@@ -40,6 +40,14 @@ const { copy } = useClipboard()
 const onCopy = () => {
   copy(unref(url))
 }
+
+useSeoMeta({
+  title: 'Polysplit',
+  ogTitle: 'Polysplit',
+  description: 'Polysplit blockchain RPC aggregator',
+  ogDescription: 'Polysplit blockchain RPC aggregator',
+  ogImage: 'https://polysplit.cloud/logo.png',
+})
 </script>
 
 <template>
