@@ -25,7 +25,7 @@ import {
       </fwb-navbar-collapse>
     </template>
   </FwbNavbar>
-  <div class="bg-white p-10 lg:px-[450px]">
+  <div class="bg-white p-10 lg:px-[400px]">
     <slot />
   </div>
 </template>
