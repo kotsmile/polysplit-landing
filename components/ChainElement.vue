@@ -11,7 +11,8 @@ export interface ChainElementProps {
 const props = defineProps<ChainElementProps>()
 
 const url = computed(
-  () => 'https://rpc.polysplit.cloud/v1/chain/' + unref(props.id),
+  () =>
+    'https://rpc.polysplit.cloud/v1/chain/' + unref(props.id) + '?site=hello',
   //() => 'http://localhost:3001/v1/chain/' + unref(props.id),
 )
 const time = ref('-')
