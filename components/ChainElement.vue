@@ -33,7 +33,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <li class="flex items-center">
+  <li class="flex items-center text-[12px] sm:text-[15px]">
     <svg
       v-if="props.status"
       class="w-3.5 h-3.5 me-2 text-green-500 dark:text-green-400 flex-shrink-0"

@@ -13,7 +13,11 @@ import {
 <template>
   <FwbNavbar class="bg-gradient-to-r from-primary-0 to-secondary-0">
     <template #logo>
-      <FwbNavbarLogo alt="Flowbite logo" image-url="/svgs/logo-inverse.svg" link="#">
+      <FwbNavbarLogo
+        alt="Flowbite logo"
+        image-url="/svgs/logo-inverse.svg"
+        link="#"
+      >
       </FwbNavbarLogo>
     </template>
     <template #default="{ isShowMenu }">
@@ -25,7 +29,7 @@ import {
       </fwb-navbar-collapse>
     </template>
   </FwbNavbar>
-  <div class="bg-white p-10 lg:px-[400px]">
+  <div class="bg-white p-10 xl:px-[400px]">
     <slot />
   </div>
 </template>
