@@ -13,16 +13,14 @@ const stats = useGetStats()
         {{ stats.data.value?.shared.countFromLanding24 }}
       </p>
       <div class="flex flex-col">
-        <div
-          v-for="[chainId, stat] of Object.entries(stats.data.value.perChainId)"
-          class="border-[2px] border-primary p-4"
-        >
-          ChainId: {{ chainId }}
+        <div v-for="[chainId, stat] of Object.entries(stats.data.value.perChainId)"
+          class="border-[2px] border-primary p-4">
+          <span class="font-bold text-xl">ChainId: {{ chainId }}</span>
 
           <p>Unique users: {{ stat.uniqueUsers }}</p>
           <p>Most popular rpc: {{ stat.popularRpc }}</p>
           <div>
-            For 24 hours:
+            <span class="font-bold"> For 24 hours: </span>
             <p>Ok requests: {{ stat.okCount24 }}</p>
             <p>Error requests: {{ stat.errorCount24 }}</p>
             <p>Total requests: {{ stat.totalCount24 }}</p>
@@ -33,22 +31,23 @@ const stats = useGetStats()
             <p>Avg attempts to get rpc: {{ stat.avgAttempts24 }}</p>
           </div>
           <div>
-            For all time
+            <span class="font-bold"> For all time: </span>
+
             <p>Ok requests: {{ stat.okCount }}</p>
             <p>Error requests: {{ stat.errorCount }}</p>
             <p>Total requests: {{ stat.totalCount }}</p>
             <p>Ok rate: {{ (stat.okCount / stat.totalCount) * 100 }}%</p>
             <p>Error rate: {{ (stat.errorCount / stat.totalCount) * 100 }}%</p>
 
-            Top rpc:
+            <span class="font-bold"> Top rpc: </span>
+
             <div>
-              <p v-for="rpc of stat.topRpcs">
-                {{ rpc }}
-              </p>
+              <p v-for="rpc of stat.topRpcs">- {{ rpc }}</p>
             </div>
 
             <div>
-              Time response
+              <span class="font-bold"> Time response </span>
+
               <p>AVG: {{ stat.responseTimeMs.avg }}</p>
               <p>MIN: {{ stat.responseTimeMs.min }}</p>
               <p>MAX: {{ stat.responseTimeMs.max }}</p>
