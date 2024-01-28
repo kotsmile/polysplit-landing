@@ -11,7 +11,6 @@ import {
   FwbHeading,
   FwbButton,
 } from 'flowbite-vue'
-import type { ChainElementProps } from '@/components/ChainElement.vue'
 
 onMounted(() => {
   initFlowbite()
@@ -19,178 +18,6 @@ onMounted(() => {
 // 1,5,10,25,56,66,97,100,137,250,338,369,420,599,943,1001,1088,1101,4002,5000,8217,8453,10200,42161,43113,43114,59140,59144,80001,84531,421613
 
 const defaultLogo = 'https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg'
-
-const chainList: (ChainElementProps & { type: 'testnet' | 'mainnet' })[] = [
-  {
-    status: true,
-    name: 'Ethereum Mainnet',
-    id: '1',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'BNB Smart Chain',
-    id: '56',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_binance.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Polygon',
-    id: '137',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_polygon.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Base',
-    id: '8453',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_base.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Arbitrum One',
-    id: '42161',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Avalanche C-Chain',
-    id: '43114',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Fantom Opera',
-    id: '250',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_fantom.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Optimism',
-    id: '10',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_optimism.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Linea',
-    id: '59144',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_linea.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Polygon zkEVM',
-    id: '1101',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_polygon.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'PulseChain',
-    id: '369',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_pulse.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Mantle',
-    id: '5000',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_mantle.jpg',
-    type: 'mainnet',
-  },
-
-  {
-    status: true,
-    name: 'Klaytn Cypress',
-    id: '8217',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_klaytn.jpg',
-    type: 'mainnet',
-  },
-  {
-    status: true,
-    name: 'Goerli Testnet',
-    id: '5',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_ethereum.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'BNB Smart Chain Testnet',
-    id: '97',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_binance.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'Polygon Mumbai Testnet',
-    id: '80001',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_polygon.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'Base Goerli Testnet',
-    id: '84531',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_base.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'Arbitrum Goerli Testnet',
-    id: '421613',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_arbitrum.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'Avalanche Fuji Testnet',
-    id: '43113',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'Fantom Testnet',
-    id: '4002',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_fantom.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'Optimism Goerli Testnet',
-    id: '420',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_optimism.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'Linea Testnet',
-    id: '59140',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_linea.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'Pulse chain testnet v4',
-    id: '943',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_pulse.jpg',
-    type: 'testnet',
-  },
-  {
-    status: true,
-    name: 'Klaytn Baobab Testnet',
-    id: '1001',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_klaytn.jpg',
-    type: 'testnet',
-  },
-]
 
 const chainId = ref(':id')
 const url = computed(
@@ -246,30 +73,15 @@ useSeoMeta({
       <fwb-heading tag="h4" class="mb-2">How to use?</fwb-heading>
       <FwbP>Simple, just like your regular RPC provider</FwbP>
 
-      <div
-        class="flex relative justify-center my-2 items-center h-[70px] border-[2px] rounded-md bg-[#FFF]"
-      >
+      <div class="flex relative justify-center my-2 items-center h-[70px] border-[2px] rounded-md bg-[#FFF]">
         <FwbP class="font-mono text-[8px] sm:text-[18px] font-bold">
           {{ url }}
         </FwbP>
-        <FwbButton
-          color="alternative"
-          class="absolute top-1/2 right-5 -translate-y-1/2"
-          @click="onCopy"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-4 h-5"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"
-            />
+        <FwbButton color="alternative" class="absolute top-1/2 right-5 -translate-y-1/2" @click="onCopy">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+            class="w-4 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
           </svg>
         </FwbButton>
       </div>
@@ -281,28 +93,18 @@ useSeoMeta({
         <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">
           Mainnets
         </h2>
-        <ul
-          class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400"
-        >
-          <ChainElement
-            v-for="chain of chainList.filter((c) => c.type === 'mainnet')"
-            v-bind="{ ...chain, image: chain.logo ?? defaultLogo }"
-            :key="chain.id"
-          />
+        <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
+          <ChainElement v-for="chain of chainList.filter((c) => c.type === 'mainnet')"
+            v-bind="{ ...chain, image: chain.logo ?? defaultLogo }" :key="chain.id" />
         </ul>
       </div>
       <div>
         <h2 class="my-2 text-lg font-semibold text-gray-900 dark:text-white">
           Testnets
         </h2>
-        <ul
-          class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400"
-        >
-          <ChainElement
-            v-for="chain of chainList.filter((c) => c.type === 'testnet')"
-            v-bind="{ ...chain, image: chain.logo ?? defaultLogo }"
-            :key="chain.id"
-          />
+        <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
+          <ChainElement v-for="chain of chainList.filter((c) => c.type === 'testnet')"
+            v-bind="{ ...chain, image: chain.logo ?? defaultLogo }" :key="chain.id" />
         </ul>
       </div>
     </div>
@@ -310,9 +112,7 @@ useSeoMeta({
     <div>
       <div>
         <fwb-heading tag="h4" class="mb-2">Why Choose Us? </fwb-heading>
-        <fwb-heading tag="h5" class="mb-1"
-          >1. Lightning-Fast RPC Node Access:</fwb-heading
-        >
+        <fwb-heading tag="h5" class="mb-1">1. Lightning-Fast RPC Node Access:</fwb-heading>
         <FwbP>
           Experience a new era of speed with our high-performance RPC nodes.
           Accelerate your transactions and interactions with blockchain

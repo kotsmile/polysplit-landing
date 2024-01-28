@@ -16,6 +16,7 @@
     "@nuxtjs/google-fonts": "^3.0.0-1",
     "@nuxtjs/tailwindcss": "^6.11.1",
     "nuxt": "^3.9.3",
+    "nuxt-typed-router": "^3.5.1",
     "nuxt-vercel-analytics": "^1.0.0",
     "vue": "^3.4.14",
     "vue-router": "^4.2.5"

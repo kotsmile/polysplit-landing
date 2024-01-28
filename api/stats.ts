@@ -4,20 +4,31 @@ import { createQueryKeys } from '@lukemorales/query-key-factory'
 import { rpcClient } from '@/api'
 
 const statsKeys = createQueryKeys('stats', {
-  stats: null,
+  all: null,
+  chainId: (params: { chainId: MaybeRef<string> }) => [params],
 })
 
-export const useGetStats = () => {
+export const useGetStatsAll = () => {
   return useQuery({
-    ...statsKeys.stats,
+    ...statsKeys.all,
     async queryFn() {
-      try {
-        const response = await rpcClient.GetV1Stats().then((data) => data.data)
-        console.log({ response })
-        return response
-      } catch (error) {
-        console.error(error)
-      }
+      return await rpcClient.GetV1StatsAll().then((data) => data.data)
     },
+  })
+}
+
+export const useGetStatsChain = (
+  chainId: MaybeRef<string>,
+  enabled: MaybeRef<boolean>,
+) => {
+  return useQuery({
+    ...statsKeys.chainId({ chainId }),
+    async queryFn({ queryKey }) {
+      const params = queryKey[2]
+      return await rpcClient
+        .GetV1StatsChainId({ params: { chainId: params.chainId } })
+        .then((data) => data.data)
+    },
+    enabled,
   })
 }

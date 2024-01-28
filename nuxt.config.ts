@@ -1,7 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/google-fonts', "nuxt-vercel-analytics"],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts',
+    'nuxt-vercel-analytics',
+    'nuxt-typed-router',
+  ],
   googleFonts: {
     families: {
       Nunito: true,
