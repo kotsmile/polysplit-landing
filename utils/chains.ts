@@ -49,13 +49,13 @@ export const chainList: ChainConfig[] = [
     logo: 'https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg',
     type: 'mainnet',
   },
-  {
-    status: true,
-    name: 'Fantom Opera',
-    id: '250',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_fantom.jpg',
-    type: 'mainnet',
-  },
+  // {
+  //   status: true,
+  //   name: 'Fantom Opera',
+  //   id: '250',
+  //   logo: 'https://icons.llamao.fi/icons/chains/rsz_fantom.jpg',
+  //   type: 'mainnet',
+  // },
   {
     status: true,
     name: 'Optimism',
@@ -141,13 +141,13 @@ export const chainList: ChainConfig[] = [
     logo: 'https://icons.llamao.fi/icons/chains/rsz_avalanche.jpg',
     type: 'testnet',
   },
-  {
-    status: true,
-    name: 'Fantom Testnet',
-    id: '4002',
-    logo: 'https://icons.llamao.fi/icons/chains/rsz_fantom.jpg',
-    type: 'testnet',
-  },
+  // {
+  //   status: true,
+  //   name: 'Fantom Testnet',
+  //   id: '4002',
+  //   logo: 'https://icons.llamao.fi/icons/chains/rsz_fantom.jpg',
+  //   type: 'testnet',
+  // },
   {
     status: true,
     name: 'Optimism Goerli Testnet',
