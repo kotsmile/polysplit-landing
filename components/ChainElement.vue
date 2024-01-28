@@ -60,7 +60,7 @@ onMounted(async () => {
       />
     </svg>
 
-    <img :src="props.logo" class="rounded-full mr-2" />
+    <img :src="props.logo" class="rounded-full mr-2 w-[15px] h-[15px]" />
     {{ props.name }} (id: {{ props.id }})
     <FwbBadge type="green" class="ml-2">{{ time }} ms</FwbBadge>
   </li>
